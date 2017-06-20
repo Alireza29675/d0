@@ -1,7 +1,7 @@
 {
   "name": "d0",
-  "version": "1.0.0",
-  "description": "Dimension 0 in n-Dimensions World",
+  "version": "1.0.1",
+  "description": "Dimension 0 in n-Dimensional World",
   "main": "lib/index.js",
   "scripts": {
     "test": "node test/index.js",

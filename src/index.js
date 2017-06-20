@@ -7,7 +7,10 @@ class D0 {
     // Famous dimensions
     d (n, to) {
         if (to === undefined) return this.dimensions[n-1] || 0
-        else if (n !== undefined) this.dimensions[n-1] = to
+        else if (n !== undefined) {
+            this.dimensions[n-1] = to
+            while (this.dimensions[this.dimensions.length-1] === 0) this.dimensions.splice(this.dimensions.length-1, 1)
+        }
         return this
     }
     get count () {
@@ -39,16 +42,29 @@ class D0 {
     }
 
     // methods
-    mapDimensionsWith (point, func) {
+    each (func) {
+        for (let i = 1; i <= this.count; i++) func(i, this.d(i))
+    }
+    eachWith (point, func) {
         const maxCount = Math.max(this.count, point.count)
-        for (let i = 1; i <= maxCount; i++) this.d(i, func(this.d(i), point.d(i)))
+        for (let i = 1; i <= maxCount; i++) func(i, this.d(i), point.d(i))
         return this
     }
     add (point) {
-        return this.mapDimensionsWith(point, (i, j) => i + j)
+        return this.eachWith(point, (index, i, j) => this.d(index, i + j))
     }
     sub (point) {
-        return this.mapDimensionsWith(point, (i, j) => i - j)
+        return this.eachWith(point, (index, i, j) => this.d(index, i - j))
+    }
+    equals (point) {
+        let ret = true
+        this.eachWith(point, (index, i, j) => {
+            if (i !== j) ret = false
+        })
+        return ret
+    }
+    abs () {
+        return this.each((index, i) => this.d(index, Math.abs(this.d(i))))
     }
 
     // to String Point

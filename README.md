@@ -1,2 +1,2 @@
 # d0
-Dimension 0 in n-Dimensions World
+Dimension 0 in n-Dimensional World
