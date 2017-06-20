@@ -66,6 +66,14 @@ class D0 {
     abs () {
         return this.each((index, i) => this.d(index, Math.abs(this.d(i))))
     }
+    distance (point) {
+        let count = 0, sumSqr = 0
+        this.eachWith(point, (index, i, j) => {
+            count++
+            sumSqr += Math.pow(i - j, 2)
+        })
+        return Math.sqrt(sumSqr)
+    }
 
     // to String Point
     toString () {
