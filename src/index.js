@@ -4,6 +4,8 @@ class D0 {
         for (let i in arguments) this.dimensions.push(arguments[i])
     }
 
+    static ZERO = new D0()
+
     // Famous dimensions
     d (n, to) {
         if (to === undefined) return this.dimensions[n-1] || 0
@@ -44,6 +46,7 @@ class D0 {
     // methods
     each (func) {
         for (let i = 1; i <= this.count; i++) func(i, this.d(i))
+        return this
     }
     eachWith (point, func) {
         const maxCount = Math.max(this.count, point.count)
@@ -73,6 +76,14 @@ class D0 {
             sumSqr += Math.pow(i - j, 2)
         })
         return Math.sqrt(sumSqr)
+    }
+    multiplay (toWhat) {
+        if (toWhat instanceof D0) return this.eachWith(toWhat, (index, i, j) => this.d(index, i * j))
+        return this.each((index, i) => this.d(index, i * toWhat))
+    }
+    divide (fromWhat) {
+        if (fromWhat instanceof D0) return this.eachWith(fromWhat, (index, i, j) => this.d(index, i / j))
+        return this.each((index, i) => this.d(index, i / fromWhat))
     }
 
     // to String Point
