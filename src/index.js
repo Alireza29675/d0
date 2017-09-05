@@ -152,16 +152,48 @@ class D0 {
 
 
     /**
-     * returns distance between this point and one another point
+     * returns euclidean distance between this point and one another point
      * @param {D0} point
      * @returns {number}
      */
-    distance (point) {
-        let sumSqr = 0;
-        this.eachWith(point, (index, i, j) => {
-            sumSqr += Math.pow(i - j, 2)
-        });
-        return Math.sqrt(sumSqr)
+    euclideanDistanceTo (point) {
+        let sigmaSquares = 0;
+        this.eachWith(point, (index, i, j) => sigmaSquares += Math.pow(i - j, 2));
+        return Math.sqrt(sigmaSquares)
+    }
+
+
+    /**
+     * returns manhattan distance between this point and one another point
+     * @param {D0} point
+     * @returns {number}
+     */
+    manhattanDistanceTo (point) {
+        let sigmaDeltas = 0;
+        this.eachWith(point, (index, i, j) => sigmaDeltas += Math.abs(i - j));
+        return sigmaDeltas
+    }
+
+
+    /**
+     * returns square distance between this point and one another point
+     * @param {D0} point
+     * @returns {number}
+     */
+    squareDistanceTo (point) {
+        let maxDelta = 0;
+        this.eachWith(point, (index, i, j) => maxDelta = Math.max(maxDelta, Math.abs(i - j)));
+        return maxDelta
+    }
+
+
+    /**
+     * returns distance between this point and one another point (!it's euclideanDistanceTo by default)
+     * @param {D0} point
+     * @returns {number}
+     */
+    distanceTo (point) {
+        return this.euclideanDistanceTo(point)
     }
 
 
