@@ -198,6 +198,17 @@ class D0 {
 
 
     /**
+     * returns a clone point of this point
+     * @returns {D0}
+     */
+    clone () {
+        const newPoint = new D0();
+        this.each((index, value) => newPoint.d(index, value));
+        return newPoint
+    }
+
+
+    /**
      * returns string view of this point
      * @returns {string}
      */
