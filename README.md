@@ -43,7 +43,7 @@ D0.ZERO // => x = 0, y = 0, z = 0, ... [dimension-n = 0]
 
 With this method you can either `get` or `set` the dimension-n value
 
-```Javascript
+```javascript
 console.log(point.d(1)); // => 3
 // returns the value of dimension-1 (x)
 point.d(4, 6.5);
@@ -56,28 +56,28 @@ point.d(4, 6.5);
 
 returns count of point's dimensions
 
-```Javascript
+```javascript
 console.log(point.count); // => 5
 ```
 
 ---
 
-### D0.x, D0.y, D0.z, D0.w
+### D0.prototype.x, D0.prototype.y, D0.prototype.z, D0.prototype.w
 
-`get` the value of famous dimentions
+D0 has `getters` for most useful dimensions:
 
-```Javascript
-console.log(point1.x); => 3
-console.log(point1.y); => 4
-console.log(point1.z); => 5
-console.log(point1.w); => 0
+```javascript
+console.log(point.x); // => 3
+console.log(point.y); // => 4
+console.log(point.z); // => 5
+console.log(point.w); // => 6.5
 ```
 
-`set` the value of famous dimentions
+Also there are `setters` for them which you can use like:
 
-```Javascript
-point1.w = 6
-console.log(point1.w); => 6
+```javascript
+point.z = 8;
+console.log(point.z); // => 8
 ```
 
 ---
