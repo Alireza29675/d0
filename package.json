@@ -4,7 +4,7 @@
   "description": "Dimension 0 in n-Dimensional World",
   "main": "lib/index.js",
   "scripts": {
-    "test": "node test/index.js",
+    "test": "nodemon test/index.js",
     "test-watch": "nodemon test/index.js",
     "compile": "babel --presets es2015,stage-0 -d lib/ src/",
     "compile-watch": "babel -w --presets es2015,stage-0 -d lib/ src/",
