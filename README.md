@@ -81,3 +81,12 @@ console.log(point1.w); => 6
 
 ---
 
+### D0.prototype.d()
+
+print each dimention index and value
+
+```Javascript
+point1.each(function(index, value){
+    console.log(value);
+}) => 3, 4, 5.
+```
