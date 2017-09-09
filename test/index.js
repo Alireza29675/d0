@@ -1,19 +1,19 @@
 let D0 = require('../lib/index');
 
-let point1 = new D0(3, 4, 5);
-let point2 = new D0(3, 2, 2);
-let point3 = point1.clone().d(2, 7).d(3, 2);
+let p1 = new D0(0, 0, 10, 5, 2);
+let p2 = new D0(10, 5, 4);
+let p3 = new D0(20, 22, 10);
 
-console.log('Distance between point1 and point2:');
-console.log(
-    ' => Euclidean Distance: ' + point1.euclideanDistanceTo(point2),
-    '\n => Manhattan Distance: ' + point1.manhattanDistanceTo(point2),
-    '\n => Square Distance: ' + point1.squareDistanceTo(point2)
-);
+console.log('p1:' + p1.toString());
+console.log('p2:' + p2.toString());
+console.log('p3:' + p3.toString() + '\n');
 
-console.log('\n\nDistance between point1 and point3:');
-console.log(
-    ' => Euclidean Distance: ' + point1.euclideanDistanceTo(point3),
-    '\n => Manhattan Distance: ' + point1.manhattanDistanceTo(point3),
-    '\n => Square Distance: ' + point1.squareDistanceTo(point3)
-);
+console.log('Euclidean:');
+console.log('=> p1 to p2' + p1.distanceTo(p2));
+console.log('=> p1 to p2' + p1.distanceTo(p3));
+console.log('Manhattan:');
+console.log('=> p1 to p2' + p1.manhattanDistanceTo(p2));
+console.log('=> p1 to p2' + p1.manhattanDistanceTo(p3));
+console.log('Square:');
+console.log('=> p1 to p2' + p1.squareDistanceTo(p2));
+console.log('=> p1 to p2' + p1.squareDistanceTo(p3));
