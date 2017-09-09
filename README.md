@@ -81,7 +81,7 @@ console.log(point1.w); => 6
 
 ---
 
-### D0.prototype.d()
+### D0.prototype.each()
 
 print each dimention index and value
 
