@@ -219,4 +219,5 @@ class D0 {
     }
 }
 
-module.exports = D0;
+if (typeof module !== 'undefined') module.exports = D0;
+if (typeof window !== 'undefined') window.D0 = D0;
