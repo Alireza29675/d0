@@ -36,29 +36,28 @@ Also you can access to the origin point in your application using:
 D0.ZERO // => x = 0, y = 0, z = 0, ... [dimension-n = 0]
 ```
 
-## Methods
+## Methods and Properties
 
----
 
-### D0.prototype.d()
+### D0.prototype.d(n, [setTo])
 
-With this method you can either `get the nth dimention` or `set the nth dimention value to the object`
+With this method you can either `get` or `set` the dimension-n value
 
 ```Javascript
-// return the value of first dimention
-console.log(point1.d(1)); => 3
-// set the value of fourth dimention to 6
-point1.d(4, 6);
+console.log(point.d(1)); // => 3
+// returns the value of dimension-1 (x)
+point.d(4, 6.5);
+// sets the dimension-4's value to 6.5
 ```
 
 ---
 
-### D0.count
+### D0.prototype.count
 
-return number of dimentions
+returns count of point's dimensions
 
 ```Javascript
-console.log(point1.count); => 4
+console.log(point.count); // => 5
 ```
 
 ---
