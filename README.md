@@ -82,12 +82,26 @@ console.log(point.z); // => 8
 
 ---
 
-### D0.prototype.each()
+### D0.prototype.each(callback)
 
-print each dimention index and value
+Executes a provided function once for each dimension.
 
-```Javascript
-point1.each(function(index, value){
-    console.log(value);
-}) => 3, 4, 5.
+**Syntax:**
+```javascript
+D0.prototype.each(function callback(dimensionIndex, dimensionValue) {
+    // your iterator
+});
+```
+
+**Example:**
+```javascript
+point.each(function(index, value){
+    console.log(`#${index} ~> ${value}`);
+})
+// logs
+// #1 ~> 3
+// #2 ~> 4
+// #3 ~> 8
+// #4 ~> 6.5
+// #5 ~> 7
 ```
