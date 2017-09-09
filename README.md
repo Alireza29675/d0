@@ -1,37 +1,39 @@
 # d0
+
 Dimension 0 in n-Dimensional World
+
 
 ## Motivation
 
----
-
 This package has created to use in fields that you need to use physics rules without any real world limitation and AI fields
+
 
 ## Installation
 
----
+You can install this package by the following  :
 
-You can install this package by the following syntax :
-
- 1. download the package directly from github : https://github.com/Alireza29675/d0
- 2. install package using npm syntax :
- ```Javascript
- npm install D0
+ 1. Clone [this repository](https://github.com/Alireza29675/d0) directly from Github then get and use the main js file from `lib/`
+ 2. Install package using [npm](https://npmjs.org) :
+ ```bash
+ npm install --save D0
  ```
 
 ## Preparation for use 
 
----
-
-you creat a multidimentional point with desired dimentions
-
-```Javascript
-let point1 = new D0(3, 4, 5); //which x = 3, y = 4, z = 5.
+After importing D0 to your code like this:
+```javascript
+import D0 from 'd0'
 ```
 
-you can declare the origin with the following syntax :
-```Javascript
-let zero = D0.ZERO;
+You can create a multi-dimensional point with desired dimensions
+
+```javascript
+let point = new D0(3, 4, 5, 6, 7); // => x = 3, y = 4, z = 5, w = 6, dimension-5 = 7
+```
+
+Also you can access to the origin point in your application using:
+```javascript
+D0.ZERO // => x = 0, y = 0, z = 0, ... [dimension-n = 0]
 ```
 
 ## Methods
