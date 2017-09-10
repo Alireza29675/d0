@@ -130,5 +130,4 @@ point.eachWith(function(index, valueOfPoint1, valueOfPoint2){
 // #10, 4 false
 // #5, 0 false
 // #2, 0 false
-
----
+```
