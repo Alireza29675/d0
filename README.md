@@ -121,15 +121,16 @@ D0.prototype.eachWith(secondPoint, function callback(dimensionIndex, dimensionVa
 
 **Example:**
 ```javascript
-point.eachWith(function(index, valueOfPoint1, valueOfPoint2){
-    console.log(`#${valueOfPoint1}, ${valueOfPoint2}, ${valueOfPoint1} === ${valueOfPoint2}`);
+let point2 = new D0(10, 4, 5)
+point.eachWith(point2, function(index, valueOfPoint1, valueOfPoint2){
+    console.log(`#${valueOfPoint1}, ${valueOfPoint2}, ${valueOfPoint1 === valueOfPoint2}`);
 })
 // logs
-// #0, 10 false
-// #0, 5 false
-// #10, 4 false
-// #5, 0 false
-// #2, 0 false
+// #3, 10, false
+// #4, 4, true
+// #8, 5, false
+// #6.5, 0, false
+// #7, 0, false
 ```
 
 ---
@@ -145,7 +146,7 @@ D0.prototype.add(point)
 
 **Example:**
 ```javascript
-point1.add(point2)
-console.log('#$D0 {dimentions [x, y, z, w, ...]'} 
-// => D0 { dimensions: [ 10, 5, 14, 5, 2 ] }
+point.add(point2)
+console.log(point.toString())
+// => (13, 8, 13, 6.5, 7)
 ```
