@@ -168,3 +168,31 @@ point.subtract(point2)
 console.log(point.toString())
 // => (-3, 0, 3, 6.5, 7)
 ```
+
+---
+
+### D0.prototype.multiply(toWhat)
+
+mutiply point1 to point2 or a number
+
+**Syntax:**
+```javascript
+D0.prototype.mutiply(point)
+```
+
+**Example:**
+```javascript
+point.mutiply(point2)
+console.log(point.toString())
+// => (30, 16, 40, 0, 0)
+```
+
+**Example:**
+```javascript
+let number = 2
+console.log(point.toString())
+// => (30, 16, 40, 0, 0)
+point.mutiply(number)
+console.log(point.toString())
+// => (60, 32, 80, 0, 0)
+```
