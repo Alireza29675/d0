@@ -10,7 +10,7 @@ This package has created to use in fields that you need to use physics rules wit
 
 ## Installation
 
-You can install this package by the following  :
+You can install this package by the following ways :
 
  1. Clone [this repository](https://github.com/Alireza29675/d0) directly from Github then get and use the main js file from `lib/`
  2. Install package using [npm](https://npmjs.org) :
@@ -105,3 +105,30 @@ point.each(function(index, value){
 // #4 ~> 6.5
 // #5 ~> 7
 ```
+
+---
+
+### D0.prototype.eachWith(secondPoint, callback)
+
+Executes a provided function one by one for each dimension of two points
+
+**Syntax:**
+```javascript
+D0.prototype.eachWith(secondPoint, function callback(dimensionIndex, dimensionValueOfPoint1, dimensionValueOfPoint2) {
+    // your iterator
+});
+```
+
+**Example:**
+```javascript
+point.eachWith(function(index, valueOfPoint1, valueOfPoint2){
+    console.log(`${valueOfPoint1}, ${valueOfPoint2}, ${valueOfPoint1} === ${valueOfPoint2}`);
+})
+// logs
+// #0, 10 false
+// #0, 5 false
+// #10, 4 false
+// #5, 0 false
+// #2, 0 false
+
+---
