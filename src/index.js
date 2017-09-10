@@ -1,7 +1,6 @@
 class D0 {
     constructor () {
         this.dimensions = [];
-        console.log(arguments)
         for (let i in arguments) this.d(Number(i)+1, arguments[i])
     }
 
