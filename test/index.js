@@ -4,6 +4,7 @@ let p1 = new D0(0, 0, 10, 5, 2);
 let p2 = new D0(10, 5, 4);
 let p3 = new D0(20, 22, 10);
 
+p1.subtract(p2).toString()
 console.log('p1:' + p1.toString());
 console.log('p2:' + p2.toString());
 console.log('p3:' + p3.toString() + '\n');

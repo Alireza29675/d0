@@ -150,3 +150,21 @@ point.add(point2)
 console.log(point.toString())
 // => (13, 8, 13, 6.5, 7)
 ```
+
+---
+
+### D0.prototype.subtract(point)
+
+subtract point2 to point1
+
+**Syntax:**
+```javascript
+D0.prototype.subtract(point)
+```
+
+**Example:**
+```javascript
+point.subtract(point2)
+console.log(point.toString())
+// => (-3, 0, 3, 6.5, 7)
+```
