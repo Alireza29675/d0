@@ -110,7 +110,7 @@ point.each(function(index, value){
 
 ### D0.prototype.eachWith(secondPoint, callback)
 
-Executes a provided function one by one for each dimension of two points
+Executes a provided function one by one for each dimension of two points.
 
 **Syntax:**
 ```javascript
@@ -173,7 +173,7 @@ console.log(point.toString())
 
 ### D0.prototype.multiply(toWhat)
 
-Mutiply point1 to point2 or a number
+Mutiply point1 to point2 or a number.
 
 **Syntax:**
 ```javascript
@@ -201,7 +201,7 @@ console.log(point.toString())
 
 ### D0.prototype.equals(point)
 
-Compare point to point2 in binary form
+Compare point to point2 in binary form.
 
 **Syntax:**
 ```javascript
@@ -218,7 +218,7 @@ console.log(`#$point.equals(point2)`)
 
 ### D0.prototype.abs()
 
-This method return absolute value of every dimensions
+This method return absolute value of every dimensions.
 
 **Syntax:**
 ```javascript
@@ -232,9 +232,11 @@ console.log(`#$point.abs()`)
 // log => (60, 32, 80, 0, 0)
 ```
 
+---
+
 ### D0.prototype.euclideanDistanceTo(point)
 
-Calculate euclidean distance between point and point2
+Calculate euclidean distance between point and point2.
 
 **Syntax:**
 ```javascript
@@ -247,9 +249,11 @@ console.log(`#$point.euclideanDistanceTo(point2)`)
 // log => 94.38749917229505
 ```
 
+---
+
 ### D0.prototype.manhattanDistanceTo(point)
 
-Calculate manhattan distance between point and point2
+Calculate manhattan distance between point and point2.
 
 **Syntax:**
 ```javascript
@@ -262,9 +266,11 @@ console.log(`#$point.manhattanDistanceTo(point)`)
 // log => 153
 ```
 
+---
+
 ### D0.prototype.manhattanDistanceTo(point)
 
-Calculate square distance between point and point2
+Calculate square distance between point and point2.
 
 **Syntax:**
 ```javascript
@@ -277,9 +283,11 @@ console.log(`#$point.squareDistanceTo(point)`)
 // log => 75
 ```
 
+---
+
 ### D0.prototype.distanceTo(point)
 
-return euclidean distance between point and point2
+return euclidean distance between point and point2.
 
 **Syntax:**
 ```javascript
@@ -290,4 +298,21 @@ D0.prototype.distanceTo(point)
 ```javascript
 console.log(`#$point.distanceTo(point)`)
 // log => 94.38749917229505
+```
+
+---
+
+### D0.prototype.clone()
+
+Simply create a copy of the point.
+
+**Syntax:**
+```javascript
+D0.prototype.clone()
+```
+
+**Example:**
+```javascript
+console.log(`#$point.clone()`)
+// log => (60, 32, 80)
 ```
