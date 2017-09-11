@@ -259,5 +259,5 @@ D0.prototype.manhattanDistanceTo(point)
 **Example:**
 ```javascript
 console.log(`#$point.manhattanDistanceTo(point)`)
-// log => 94.38749917229505
+// log => 153
 ```
