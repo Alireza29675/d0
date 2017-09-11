@@ -227,6 +227,7 @@ D0.prototype.abs()
 
 **Example:**
 ```javascript
+point.d(1, -60)
 console.log(`#$point.abs()`)
 // log => (60, 32, 80, 0, 0)
 ```
