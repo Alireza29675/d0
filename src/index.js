@@ -1,7 +1,7 @@
 class D0 {
     constructor () {
         this.dimensions = [];
-        for (let arg of arguments) this.dimensions.push(arg)
+        for (let i in arguments) this.d(Number(i)+1, arguments[i])
     }
 
     /**
@@ -20,9 +20,8 @@ class D0 {
     d (n, setTo) {
         if (!setTo) return this.dimensions[n-1] || 0;
         this.dimensions[n-1] = setTo;
-        while (this.dimensions[this.dimensions.length-1] === 0) {
-            this.dimensions.splice(this.dimensions.length-1, 1) // removing latest zero dimensions
-        }
+        // removing latest zero dimensions
+        while (this.dimensions[this.count-1] === 0) this.dimensions.pop() 
         return this
     }
 

@@ -10,7 +10,7 @@ This package has created to use in fields that you need to use physics rules wit
 
 ## Installation
 
-You can install this package by the following  :
+You can install this package by the following ways :
 
  1. Clone [this repository](https://github.com/Alireza29675/d0) directly from Github then get and use the main js file from `lib/`
  2. Install package using [npm](https://npmjs.org) :
@@ -104,4 +104,232 @@ point.each(function(index, value){
 // #3 ~> 8
 // #4 ~> 6.5
 // #5 ~> 7
+```
+
+---
+
+### D0.prototype.eachWith(secondPoint, callback)
+
+Executes a provided function one by one for each dimension of two points.
+
+**Syntax:**
+```javascript
+D0.prototype.eachWith(secondPoint, function callback(dimensionIndex, dimensionValueOfPoint1, dimensionValueOfPoint2) {
+    // your iterator
+});
+```
+
+**Example:**
+```javascript
+let point2 = new D0(10, 4, 5)
+point.eachWith(point2, function(index, valueOfPoint1, valueOfPoint2){
+    console.log(`#${valueOfPoint1}, ${valueOfPoint2}, ${valueOfPoint1 === valueOfPoint2}`);
+})
+// logs
+// #3, 10, false
+// #4, 4, true
+// #8, 5, false
+// #6.5, 0, false
+// #7, 0, false
+```
+
+---
+
+### D0.prototype.add(point)
+
+Add point2 to point1
+
+**Syntax:**
+```javascript
+D0.prototype.add(point)
+```
+
+**Example:**
+```javascript
+point.add(point2)
+console.log(point.toString())
+// => (13, 8, 13, 6.5, 7)
+```
+
+---
+
+### D0.prototype.subtract(point)
+
+Subtract point2 to point1
+
+**Syntax:**
+```javascript
+D0.prototype.subtract(point)
+```
+
+**Example:**
+```javascript
+point.subtract(point2)
+console.log(point.toString())
+// => (-3, 0, 3, 6.5, 7)
+```
+
+---
+
+### D0.prototype.multiply(toWhat)
+
+Mutiply point1 to point2 or a number.
+
+**Syntax:**
+```javascript
+D0.prototype.mutiply(point)
+```
+
+**Example:**
+```javascript
+point.mutiply(point2)
+console.log(point.toString())
+// => (30, 16, 40, 0, 0)
+```
+
+**Example:**
+```javascript
+let number = 2
+console.log(point.toString())
+// => (30, 16, 40, 0, 0)
+point.mutiply(number)
+console.log(point.toString())
+// => (60, 32, 80, 0, 0)
+```
+
+---
+
+### D0.prototype.equals(point)
+
+Compare point to point2 in binary form.
+
+**Syntax:**
+```javascript
+D0.prototype.equals(point)
+```
+
+**Example:**
+```javascript
+console.log(`#$point.equals(point2)`)
+// log => false
+```
+
+---
+
+### D0.prototype.abs()
+
+This method return absolute value of every dimensions.
+
+**Syntax:**
+```javascript
+D0.prototype.abs()
+```
+
+**Example:**
+```javascript
+point.d(1, -60)
+console.log(`#$point.abs()`)
+// log => (60, 32, 80, 0, 0)
+```
+
+---
+
+### D0.prototype.euclideanDistanceTo(point)
+
+Calculate euclidean distance between point and point2.
+
+**Syntax:**
+```javascript
+D0.prototype.euclideanDistanceTo(point)
+```
+
+**Example:**
+```javascript
+console.log(`#$point.euclideanDistanceTo(point2)`)
+// log => 94.38749917229505
+```
+
+---
+
+### D0.prototype.manhattanDistanceTo(point)
+
+Calculate manhattan distance between point and point2.
+
+**Syntax:**
+```javascript
+D0.prototype.manhattanDistanceTo(point)
+```
+
+**Example:**
+```javascript
+console.log(`#$point.manhattanDistanceTo(point)`)
+// log => 153
+```
+
+---
+
+### D0.prototype.manhattanDistanceTo(point)
+
+Calculate square distance between point and point2.
+
+**Syntax:**
+```javascript
+D0.prototype.squareDistanceTo(point)
+```
+
+**Example:**
+```javascript
+console.log(`#$point.squareDistanceTo(point)`)
+// log => 75
+```
+
+---
+
+### D0.prototype.distanceTo(point)
+
+return euclidean distance between point and point2.
+
+**Syntax:**
+```javascript
+D0.prototype.distanceTo(point)
+```
+
+**Example:**
+```javascript
+console.log(`#$point.distanceTo(point)`)
+// log => 94.38749917229505
+```
+
+---
+
+### D0.prototype.clone()
+
+Simply create a copy of the point.
+
+**Syntax:**
+```javascript
+D0.prototype.clone()
+```
+
+**Example:**
+```javascript
+console.log(`#$point.clone()`)
+// log => D0 { dimensions: [ 60, 32, 80 ] }
+```
+
+---
+
+### D0.prototype.toString()
+
+Return value of dimentions
+
+**Syntax:**
+```javascript
+D0.prototype.toString()
+```
+
+**Example:**
+```javascript
+console.log(`#$point.toString()`)
+// log => (60, 32, 80)
 ```
