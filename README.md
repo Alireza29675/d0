@@ -261,3 +261,18 @@ D0.prototype.manhattanDistanceTo(point)
 console.log(`#$point.manhattanDistanceTo(point)`)
 // log => 153
 ```
+
+### D0.prototype.manhattanDistanceTo(point)
+
+Calculate square distance between point and point2
+
+**Syntax:**
+```javascript
+D0.prototype.squareDistanceTo(point)
+```
+
+**Example:**
+```javascript
+console.log(`#$point.squareDistanceTo(point)`)
+// log => 75
+```
