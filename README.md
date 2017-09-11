@@ -314,5 +314,22 @@ D0.prototype.clone()
 **Example:**
 ```javascript
 console.log(`#$point.clone()`)
+// log => D0 { dimensions: [ 60, 32, 80 ] }
+```
+
+---
+
+### D0.prototype.toString()
+
+Return value of dimentions
+
+**Syntax:**
+```javascript
+D0.prototype.toString()
+```
+
+**Example:**
+```javascript
+console.log(`#$point.toString()`)
 // log => (60, 32, 80)
 ```
