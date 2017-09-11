@@ -276,3 +276,18 @@ D0.prototype.squareDistanceTo(point)
 console.log(`#$point.squareDistanceTo(point)`)
 // log => 75
 ```
+
+### D0.prototype.distanceTo(point)
+
+return euclidean distance between point and point2
+
+**Syntax:**
+```javascript
+D0.prototype.distanceTo(point)
+```
+
+**Example:**
+```javascript
+console.log(`#$point.distanceTo(point)`)
+// log => 94.38749917229505
+```
