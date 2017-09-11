@@ -231,3 +231,18 @@ point.d(1, -60)
 console.log(`#$point.abs()`)
 // log => (60, 32, 80, 0, 0)
 ```
+
+### D0.prototype.euclideanDistanceTo(point)
+
+Calculate euclidean distance between point and point2
+
+**Syntax:**
+```javascript
+D0.prototype.euclideanDistanceTo(point)
+```
+
+**Example:**
+```javascript
+console.log(`#$point.euclideanDistanceTo(point2)`)
+// log => 94.38749917229505
+```
