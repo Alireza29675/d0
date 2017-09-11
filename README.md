@@ -137,7 +137,7 @@ point.eachWith(point2, function(index, valueOfPoint1, valueOfPoint2){
 
 ### D0.prototype.add(point)
 
-add point2 to point1
+Add point2 to point1
 
 **Syntax:**
 ```javascript
@@ -155,7 +155,7 @@ console.log(point.toString())
 
 ### D0.prototype.subtract(point)
 
-subtract point2 to point1
+Subtract point2 to point1
 
 **Syntax:**
 ```javascript
@@ -173,7 +173,7 @@ console.log(point.toString())
 
 ### D0.prototype.multiply(toWhat)
 
-mutiply point1 to point2 or a number
+Mutiply point1 to point2 or a number
 
 **Syntax:**
 ```javascript
@@ -201,7 +201,7 @@ console.log(point.toString())
 
 ### D0.prototype.equals(point)
 
-compare point to point2 in binary form
+Compare point to point2 in binary form
 
 **Syntax:**
 ```javascript
@@ -212,4 +212,21 @@ D0.prototype.equals(point)
 ```javascript
 console.log(`#$point.equals(point2)`)
 // log => false
+```
+
+---
+
+### D0.prototype.abs()
+
+This method return absolute value of every dimensions
+
+**Syntax:**
+```javascript
+D0.prototype.abs()
+```
+
+**Example:**
+```javascript
+console.log(`#$point.abs()`)
+// log => (60, 32, 80, 0, 0)
 ```
