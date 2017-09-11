@@ -196,3 +196,20 @@ point.mutiply(number)
 console.log(point.toString())
 // => (60, 32, 80, 0, 0)
 ```
+
+---
+
+### D0.prototype.equals(point)
+
+compare point to point2 in binary form
+
+**Syntax:**
+```javascript
+D0.prototype.equals(point)
+```
+
+**Example:**
+```javascript
+console.log(`#$point.equals(point2)`)
+// log => false
+```
