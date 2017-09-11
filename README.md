@@ -246,3 +246,18 @@ D0.prototype.euclideanDistanceTo(point)
 console.log(`#$point.euclideanDistanceTo(point2)`)
 // log => 94.38749917229505
 ```
+
+### D0.prototype.manhattanDistanceTo(point)
+
+Calculate manhattan distance between point and point2
+
+**Syntax:**
+```javascript
+D0.prototype.manhattanDistanceTo(point)
+```
+
+**Example:**
+```javascript
+console.log(`#$point.manhattanDistanceTo(point)`)
+// log => 94.38749917229505
+```
