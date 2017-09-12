@@ -287,16 +287,17 @@ console.log(`#$point.squareDistanceTo(point)`)
 
 ### D0.prototype.distanceTo(point)
 
-return euclidean distance between point and point2.
+Returns euclidean distance between two points.
 
 **Syntax:**
 ```javascript
-D0.prototype.distanceTo(point)
+D0.prototype.distanceTo({D0})
+
 ```
 
 **Example:**
 ```javascript
-console.log(`#$point.distanceTo(point)`)
+console.log(point.distanceTo(point))
 // log => 94.38749917229505
 ```
 
@@ -306,30 +307,20 @@ console.log(`#$point.distanceTo(point)`)
 
 Simply create a copy of the point.
 
-**Syntax:**
 ```javascript
-D0.prototype.clone()
-```
-
-**Example:**
-```javascript
-console.log(`#$point.clone()`)
-// log => D0 { dimensions: [ 60, 32, 80 ] }
+console.log(point.toString()) // => (60, 32, 80)
+let pointCopy = point.clone()
+console.log(pointCopy.toString()) // => (60, 32, 80)
+console.log(pointCopy === point) // => false
+console.log(pointCopy.equals(point)) // => true
 ```
 
 ---
 
 ### D0.prototype.toString()
 
-Return value of dimentions
+Converts point to string
 
-**Syntax:**
 ```javascript
-D0.prototype.toString()
-```
-
-**Example:**
-```javascript
-console.log(`#$point.toString()`)
-// log => (60, 32, 80)
+console.log(point.toString()) // => (60, 32, 80)
 ```

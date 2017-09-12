@@ -1,7 +1,9 @@
 class D0 {
     constructor () {
         this.dimensions = [];
+        this.ready = false;
         for (let i in arguments) this.d(Number(i)+1, arguments[i])
+        this.ready = true;
     }
 
     /**
@@ -18,13 +20,12 @@ class D0 {
      * @returns {Number|D0}
      */
     d (n, setTo) {
-        if (!setTo) return this.dimensions[n-1] || 0;
+        if (setTo !== 0 && !setTo) return this.dimensions[n-1] || 0;
         this.dimensions[n-1] = setTo;
         // removing latest zero dimensions
-        while (this.dimensions[this.count-1] === 0) this.dimensions.pop() 
+        if (this.ready) while (this.dimensions[this.count-1] === 0) this.dimensions.pop();
         return this
     }
-
 
     /**
      * returns dimensions count
