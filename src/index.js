@@ -146,7 +146,7 @@ class D0 {
      * @returns {D0}
      */
     abs () {
-        return this.each((index, i) => this.d(index, Math.abs(this.d(i))))
+        return this.each((index, value) => this.d(index, Math.abs(value)))
     }
 
 
@@ -217,6 +217,7 @@ class D0 {
         return ret.slice(0, -2) + ")"
     }
 }
+
 
 if (typeof module !== 'undefined') module.exports = D0;
 if (typeof window !== 'undefined') window.D0 = D0;
