@@ -168,19 +168,19 @@ Mutiply two Points or a point to a number.
 D0.prototype.mutiply({D0|Number})
 ```
 
-**Example:**
+**Example with {D0}:**
 ```javascript
 console.log(point.toSting()) // => (-3, 0, 3, 6.5, 7)
+console.log(point2.toSting()) // => (10, 4, 5, 0, 0)
 point.mutiply(point2)
 console.log(point.toString()) // => (-30, 0, 15, 0, 0)
 ```
 
-**Example:**
+**Example with {Number}:**
 ```javascript
-let number = 2
 console.log(point.toString())
 // => (-3, 0, 3, 6.5, 7)
-point.mutiply(number)
+point.mutiply(2)
 console.log(point.toString())
 // => (-6, 0, 6, 13, 14)
 ```
@@ -189,26 +189,26 @@ console.log(point.toString())
 
 ### D0.prototype.divide(toWhat)
 
-Divide two Points or a point to a number.
+Divide the point by anthor point or a number
 
 **Syntax:**
 ```javascript
 D0.prototype.divide({D0|Number})
 ```
 
-**Example:**
+**Example with {D0}:**
 ```javascript
 console.log(point.toSting()) // => (-30, 0, 15, 0, 0)
+console.log(point2.toSting()) // => (10, 4, 5, 0, 0)
 point.divide(point2)
 console.log(point.toString()) // => (-3, 0, 3, 6.5, 7)
 ```
 
-**Example:**
+**Example with {Number}:**
 ```javascript
-let number = 3
 console.log(point.toString())
 // => (-6, 0, 6, 13, 14)
-point.divide(number)
+point.divide(3)
 console.log(point.toString())
 // => (-2, 0, 2, 4.3, 4.6)
 ```
@@ -221,7 +221,7 @@ Compare point to point2 in binary form.
 
 **Example:**
 ```javascript
-console.log(point.equals(point2)) // log => false
+console.log(point.equals(point2)) // => false
 ```
 
 ---
@@ -233,7 +233,7 @@ This method return absolute value of every dimensions.
 **Example:**
 ```javascript
 point.d(1, -60)
-console.log(point.abs()) // log => (60, 32, 80, 0, 0)
+console.log(point.abs().toString()) // => (60, 32, 80, 0, 0)
 ```
 
 ---
