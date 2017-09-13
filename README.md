@@ -123,78 +123,94 @@ D0.prototype.eachWith(secondPoint, function callback(dimensionIndex, dimensionVa
 ```javascript
 let point2 = new D0(10, 4, 5)
 point.eachWith(point2, function(index, valueOfPoint1, valueOfPoint2){
-    console.log(`#${valueOfPoint1}, ${valueOfPoint2}, ${valueOfPoint1 === valueOfPoint2}`);
+    console.log(`${valueOfPoint1}, ${valueOfPoint2}, ${valueOfPoint1 === valueOfPoint2}`);
 })
 // logs
-// #3, 10, false
-// #4, 4, true
-// #8, 5, false
-// #6.5, 0, false
-// #7, 0, false
+// 3, 10, false
+// 4, 4, true
+// 8, 5, false
+// 6.5, 0, false
+// 7, 0, false
 ```
 
 ---
 
 ### D0.prototype.add(point)
 
-Add point2 to point1
-
-**Syntax:**
-```javascript
-D0.prototype.add(point)
-```
+Add two points
 
 **Example:**
 ```javascript
 point.add(point2)
-console.log(point.toString())
-// => (13, 8, 13, 6.5, 7)
+console.log(point.toString()) // => (13, 8, 13, 6.5, 7)
 ```
 
 ---
 
 ### D0.prototype.subtract(point)
 
-Subtract point2 to point1
-
-**Syntax:**
-```javascript
-D0.prototype.subtract(point)
-```
+Subtract two Points
 
 **Example:**
 ```javascript
 point.subtract(point2)
-console.log(point.toString())
-// => (-3, 0, 3, 6.5, 7)
+console.log(point.toString()) // => (-3, 0, 3, 6.5, 7)
 ```
 
 ---
 
 ### D0.prototype.multiply(toWhat)
 
-Mutiply point1 to point2 or a number.
+Mutiply two Points or a point to a number.
 
 **Syntax:**
 ```javascript
-D0.prototype.mutiply(point)
+D0.prototype.mutiply({D0|Number})
 ```
 
-**Example:**
+**Example with {D0}:**
 ```javascript
+console.log(point.toSting()) // => (-3, 0, 3, 6.5, 7)
+console.log(point2.toSting()) // => (10, 4, 5, 0, 0)
 point.mutiply(point2)
-console.log(point.toString())
-// => (30, 16, 40, 0, 0)
+console.log(point.toString()) // => (-30, 0, 15, 0, 0)
 ```
 
-**Example:**
+**Example with {Number}:**
 ```javascript
-let number = 2
 console.log(point.toString())
-// => (30, 16, 40, 0, 0)
-point.mutiply(number)
+// => (-3, 0, 3, 6.5, 7)
+point.mutiply(2)
 console.log(point.toString())
-// => (60, 32, 80, 0, 0)
+// => (-6, 0, 6, 13, 14)
+```
+
+---
+
+### D0.prototype.divide(toWhat)
+
+Divide the point by anthor point or a number
+
+**Syntax:**
+```javascript
+D0.prototype.divide({D0|Number})
+```
+
+**Example with {D0}:**
+```javascript
+console.log(point.toSting()) // => (-30, 0, 15, 0, 0)
+console.log(point2.toSting()) // => (10, 4, 5, 0, 0)
+point.divide(point2)
+console.log(point.toString()) // => (-3, 0, 3, 6.5, 7)
+```
+
+**Example with {Number}:**
+```javascript
+console.log(point.toString())
+// => (-6, 0, 6, 13, 14)
+point.divide(3)
+console.log(point.toString())
+// => (-2, 0, 2, 4.3, 4.6)
 ```
 
 ---
@@ -203,15 +219,9 @@ console.log(point.toString())
 
 Compare point to point2 in binary form.
 
-**Syntax:**
-```javascript
-D0.prototype.equals(point)
-```
-
 **Example:**
 ```javascript
-console.log(`#$point.equals(point2)`)
-// log => false
+console.log(point.equals(point2)) // => false
 ```
 
 ---
@@ -220,16 +230,10 @@ console.log(`#$point.equals(point2)`)
 
 This method return absolute value of every dimensions.
 
-**Syntax:**
-```javascript
-D0.prototype.abs()
-```
-
 **Example:**
 ```javascript
 point.d(1, -60)
-console.log(`#$point.abs()`)
-// log => (60, 32, 80, 0, 0)
+console.log(point.abs().toString()) // => (60, 32, 80, 0, 0)
 ```
 
 ---
