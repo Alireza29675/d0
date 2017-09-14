@@ -289,7 +289,7 @@ console.log(point.squareDistanceTo(point)) // log => 75
 
 ### D0.prototype.distanceTo({D0})
 
-return euclidean distance between two points.
+Returns euclidean distance between two points.
 
 **Syntax:**
 ```javascript
@@ -308,21 +308,20 @@ console.log(point.distanceTo(point))
 
 Simply create a copy of the point.
 
-**Example:**
 ```javascript
-let newPoint = point.clone()
-console.log(newPoint)
-// log => D0 { dimensions: [ 60, 32, 80 ] }
+console.log(point.toString()) // => (60, 32, 80)
+let pointCopy = point.clone()
+console.log(pointCopy.toString()) // => (60, 32, 80)
+console.log(pointCopy === point) // => false
+console.log(pointCopy.equals(point)) // => true
 ```
 
 ---
 
 ### D0.prototype.toString()
 
-Return value of dimentions
+Converts point to string
 
-**Example:**
 ```javascript
-console.log(point.toString())
-// log => (60, 32, 80)
+console.log(point.toString()) // => (60, 32, 80)
 ```
