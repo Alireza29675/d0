@@ -135,31 +135,31 @@ point.eachWith(point2, function(index, valueOfPoint1, valueOfPoint2){
 
 ---
 
-### D0.prototype.add(point)
+### D0.prototype.add({D0})
 
 Add two points
 
 **Example:**
 ```javascript
-point.add(point2)
+point.add({D0})
 console.log(point.toString()) // => (13, 8, 13, 6.5, 7)
 ```
 
 ---
 
-### D0.prototype.subtract(point)
+### D0.prototype.subtract({D0})
 
 Subtract two Points
 
 **Example:**
 ```javascript
-point.subtract(point2)
+point.subtract({D0})
 console.log(point.toString()) // => (-3, 0, 3, 6.5, 7)
 ```
 
 ---
 
-### D0.prototype.multiply(toWhat)
+### D0.prototype.multiply({D0|Number})
 
 Mutiply two Points or a point to a number.
 
@@ -187,7 +187,7 @@ console.log(point.toString())
 
 ---
 
-### D0.prototype.divide(toWhat)
+### D0.prototype.divide({D0|Number})
 
 Divide the point by anthor point or a number
 
@@ -215,9 +215,9 @@ console.log(point.toString())
 
 ---
 
-### D0.prototype.equals(point)
+### D0.prototype.equals({D0})
 
-Compare point to point2 in binary form.
+Compare two points.
 
 **Example:**
 ```javascript
@@ -238,69 +238,67 @@ console.log(point.abs().toString()) // => (60, 32, 80, 0, 0)
 
 ---
 
-### D0.prototype.euclideanDistanceTo(point)
+### D0.prototype.euclideanDistanceTo({D0})
 
-Calculate euclidean distance between point and point2.
+Calculate euclidean distance between two points.
 
 **Syntax:**
 ```javascript
-D0.prototype.euclideanDistanceTo(point)
+D0.prototype.euclideanDistanceTo({D0})
 ```
 
 **Example:**
 ```javascript
-console.log(`#$point.euclideanDistanceTo(point2)`)
+console.log(point.euclideanDistanceTo(point2))
 // log => 94.38749917229505
 ```
 
 ---
 
-### D0.prototype.manhattanDistanceTo(point)
+### D0.prototype.manhattanDistanceTo({D0})
 
-Calculate manhattan distance between point and point2.
+Calculate manhattan distance between two points.
 
 **Syntax:**
 ```javascript
-D0.prototype.manhattanDistanceTo(point)
+D0.prototype.manhattanDistanceTo({D0})
 ```
 
 **Example:**
 ```javascript
-console.log(`#$point.manhattanDistanceTo(point)`)
-// log => 153
+console.log(point.manhattanDistanceTo(point)) // log => 153
 ```
 
 ---
 
-### D0.prototype.manhattanDistanceTo(point)
+### D0.prototype.manhattanDistanceTo({D0})
 
-Calculate square distance between point and point2.
+Calculate square distance between two points.
 
 **Syntax:**
 ```javascript
-D0.prototype.squareDistanceTo(point)
+D0.prototype.squareDistanceTo({D0})
 ```
 
 **Example:**
 ```javascript
-console.log(`#$point.squareDistanceTo(point)`)
-// log => 75
+console.log(point.squareDistanceTo(point)) // log => 75
 ```
 
 ---
 
-### D0.prototype.distanceTo(point)
+### D0.prototype.distanceTo({D0})
 
-return euclidean distance between point and point2.
+return euclidean distance between two points.
 
 **Syntax:**
 ```javascript
-D0.prototype.distanceTo(point)
+D0.prototype.distanceTo({D0})
 ```
 
 **Example:**
 ```javascript
-console.log(`#$point.distanceTo(point)`)
+console.log(point.distanceTo(point))
 // log => 94.38749917229505
 ```
 
@@ -310,14 +308,10 @@ console.log(`#$point.distanceTo(point)`)
 
 Simply create a copy of the point.
 
-**Syntax:**
-```javascript
-D0.prototype.clone()
-```
-
 **Example:**
 ```javascript
-console.log(`#$point.clone()`)
+let newPoint = point.clone()
+console.log(newPoint)
 // log => D0 { dimensions: [ 60, 32, 80 ] }
 ```
 
@@ -327,13 +321,8 @@ console.log(`#$point.clone()`)
 
 Return value of dimentions
 
-**Syntax:**
-```javascript
-D0.prototype.toString()
-```
-
 **Example:**
 ```javascript
-console.log(`#$point.toString()`)
+console.log(point.toString())
 // log => (60, 32, 80)
 ```
