@@ -238,6 +238,23 @@ console.log(point.abs().toString()) // => (60, 32, 80, 0, 0)
 
 ---
 
+### D0.prototype.distanceToOrigin()
+
+Calculate euclidean distance between this point and origin point.
+
+**Syntax:**
+```javascript
+D0.prototype.distanceToOrigin()
+```
+
+**Example:**
+```javascript
+console.log(point.distanceToOrigin())
+// log => 104.9952379872535
+```
+
+---
+
 ### D0.prototype.euclideanDistanceTo({D0})
 
 Calculate euclidean distance between two points.

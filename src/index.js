@@ -151,6 +151,17 @@ class D0 {
 
 
     /**
+     * returns euclidean distance between this point and origin point
+     * @returns {number}
+     */
+    distanceToOrigin () {
+        let sigmaSquares = 0;
+        this.each((index, i) => sigmaSquares += Math.pow(i, 2));
+        return Math.sqrt(sigmaSquares)
+    }
+
+
+    /**
      * returns euclidean distance between this point and one another point
      * @param {D0} point
      * @returns {number}
