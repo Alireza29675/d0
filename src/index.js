@@ -97,9 +97,10 @@ class D0 {
      * @returns {D0}
      */
     midPoint (point) {
-        for (let point of arguments) this.add(point);
-        this.each((index, i) => this.d(index, i / (arguments.length + 1)))
-        return this
+        const newPoint = this.clone()
+        for (let point of arguments) newPoint.add(point);
+        newPoint.divide(arguments.length + 1)
+        return newPoint
     }
 
     
@@ -168,9 +169,7 @@ class D0 {
      * @returns {number}
      */
     distanceToOrigin () {
-        let sigmaSquares = 0;
-        this.each((index, i) => sigmaSquares += Math.pow(i, 2));
-        return Math.sqrt(sigmaSquares)
+        return this.distanceTo(D0.ZERO)
     }
 
 

@@ -8,6 +8,10 @@ console.log('p1:' + p1.toString());
 console.log('p2:' + p2.toString());
 console.log('p3:' + p3.toString() + '\n');
 
+
+let p4 = p2.midPoint(p3);
+console.log('midPoint between p2 and p3: ' + p4.toString() + '\n')
+
 console.log('Euclidean:');
 console.log('=> p1 to p2' + p1.distanceTo(p2));
 console.log('=> p1 to p2' + p1.distanceTo(p3));
