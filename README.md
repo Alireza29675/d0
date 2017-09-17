@@ -137,7 +137,7 @@ point.eachWith(point2, function(index, valueOfPoint1, valueOfPoint2){
 
 ### D0.prototype.add({D0})
 
-Add two points
+Add two points.
 
 **Example:**
 ```javascript
@@ -146,6 +146,21 @@ console.log(point.toString()) // => (13, 8, 13, 6.5, 7)
 ```
 
 ---
+
+
+### D0.prototype.midPoint({D0})
+
+Calculate average of points.
+
+**Example:**
+```javascript
+point.midPoint({D0})
+console.log(point.midPoint(point2)) 
+// => (6.5, 4, 6.5, 3.25, 3.5)
+```
+
+---
+
 
 ### D0.prototype.subtract({D0})
 
