@@ -92,6 +92,19 @@ class D0 {
 
 
     /**
+     * calculate average of points
+     * @param {D0} point
+     * @returns {D0}
+     */
+    midPoint (point) {
+        const newPoint = this.clone()
+        for (let point of arguments) newPoint.add(point);
+        newPoint.divide(arguments.length + 1)
+        return newPoint
+    }
+
+    
+    /**
      * subtract a point from this point
      * @param {D0} point
      * @returns {D0}
@@ -148,6 +161,15 @@ class D0 {
      */
     abs () {
         return this.each((index, value) => this.d(index, Math.abs(value)))
+    }
+
+
+    /**
+     * returns euclidean distance between this point and origin point
+     * @returns {number}
+     */
+    distanceToOrigin () {
+        return this.distanceTo(D0.ZERO)
     }
 
 

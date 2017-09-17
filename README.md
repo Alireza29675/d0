@@ -137,7 +137,7 @@ point.eachWith(point2, function(index, valueOfPoint1, valueOfPoint2){
 
 ### D0.prototype.add({D0})
 
-Add two points
+Add two points.
 
 **Example:**
 ```javascript
@@ -146,6 +146,21 @@ console.log(point.toString()) // => (13, 8, 13, 6.5, 7)
 ```
 
 ---
+
+
+### D0.prototype.midPoint({D0})
+
+Calculate average of points.
+
+**Example:**
+```javascript
+point.midPoint({D0})
+console.log(point.midPoint(point2)) 
+// => (6.5, 4, 6.5, 3.25, 3.5)
+```
+
+---
+
 
 ### D0.prototype.subtract({D0})
 
@@ -234,6 +249,23 @@ This method return absolute value of every dimensions.
 ```javascript
 point.d(1, -60)
 console.log(point.abs().toString()) // => (60, 32, 80, 0, 0)
+```
+
+---
+
+### D0.prototype.distanceToOrigin()
+
+Calculate euclidean distance between this point and origin point.
+
+**Syntax:**
+```javascript
+D0.prototype.distanceToOrigin()
+```
+
+**Example:**
+```javascript
+console.log(point.distanceToOrigin())
+// log => 104.9952379872535
 ```
 
 ---
