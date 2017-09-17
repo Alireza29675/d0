@@ -92,6 +92,18 @@ class D0 {
 
 
     /**
+     * calculate average of points
+     * @param {D0} point
+     * @returns {D0}
+     */
+    midPoint (point) {
+        for (let point of arguments) this.add(point);
+        this.each((index, i) => this.d(index, i / (arguments.length + 1)))
+        return this
+    }
+
+    
+    /**
      * subtract a point from this point
      * @param {D0} point
      * @returns {D0}
