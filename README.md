@@ -155,7 +155,7 @@ Calculate average of points.
 **Example:**
 ```javascript
 point.midPoint({D0})
-console.log(point.midPoint(point2)) 
+console.log(point.midPoint(point2).toString()) 
 // => (6.5, 4, 6.5, 3.25, 3.5)
 ```
 
@@ -255,7 +255,7 @@ console.log(point.abs().toString()) // => (60, 32, 80, 0, 0)
 
 ### D0.prototype.distanceToOrigin()
 
-Calculate euclidean distance between this point and origin point.
+Calculate euclidean distance between this point and the origin.
 
 **Syntax:**
 ```javascript
